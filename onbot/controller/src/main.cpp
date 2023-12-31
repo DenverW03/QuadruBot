@@ -23,23 +23,7 @@ AsyncWebServer server(80);
 
 /* Structures a HTML webpage to send to a client */
 String SendHTML(){
-  String str = "<!DOCTYPE html> <html>\n";
-  str +="<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">\n";
-  str +="<title>LED Control</title>\n";
-  str +="<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}\n";
-  str +="body{margin-top: 50px;} h1 {color: #444444;margin: 50px auto 30px;}\n";
-  str +="p {font-size: 14px;color: #888;margin-bottom: 10px;}\n";
-  str +="</style>\n";
-  str +="</head>\n";
-  str +="<body>\n";
-  str +="<h1>ESP32 Web Server</h1>\n";
-
-  // Adding the control buttons
-  str +="<a href=\"/?command=open\">OPEN</a>\n";
-  str +="<a href=\"/?command=close\">CLOSE</a>\n";
-
-  str +="</body>\n";
-  str +="</html>\n";
+  String str = "<!DOCTYPE html><html><head><title>QuadruBot</title><style>html{font-family:Helvetica;}a{background-color:rgb(238,183,0);color:black;width:10vw;height:10vw;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:2vw;}body{background-color:rgb(93,93,93);display:flex;flex-direction:column;}.wrapper{display:flex;flex-direction:row;gap:2rem;margin:auto;}h1{color:white;align-self:center;}</style></head><body><h1>QuadruBotControlServer</h1><div class=\"wrapper\"><a href=\"/?command=open\">OPEN</a><a href=\"/?command=close\">CLOSE</a></div></body></html>";
   return str;
 }
 
